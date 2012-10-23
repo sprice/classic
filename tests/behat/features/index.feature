@@ -14,12 +14,9 @@ Feature: Homepage
     And I press "Log in"
     Then I should see "Add new content"
 
-  #@javascript
-  #Scenario: Logging into the site and viewing the overlay
-  #  Given I am on "/"
-  #  When I fill in "edit-name" with "admin"
-  #  And I fill in "edit-pass" with "classic"
-  #  And I press "Log in"
-  #  And I follow "Add content"
-  #  And I wait for the suggestion box to appear
-  #  Then show last response
+  @javascript
+  Scenario: View an ajax dialog
+    Given I am on "/dialog/example"
+    When I follow "User login"
+    And I wait for the suggestion box to appear
+    Then I should see "Enter your Drupal Classic Profile username."
