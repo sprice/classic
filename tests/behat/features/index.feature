@@ -18,5 +18,5 @@ Feature: Homepage
   Scenario: View an ajax dialog
     Given I am on "/dialog/example"
     When I follow "User login"
-    And I wait for the suggestion box to appear
+    And I wait for the dialog box to appear
     Then I should see "Enter your Drupal Classic Profile username."

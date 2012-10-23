@@ -6,5 +6,6 @@ default:
       base_url:  'http://127.0.0.1'
       #base_url:  'http://behat.local'
       selenium2: ~
-      default_session: selenium2
+      goutte: ~
+      default_session: goutte
       javascript_session: selenium2

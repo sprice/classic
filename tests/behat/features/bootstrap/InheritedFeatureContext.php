@@ -3,10 +3,10 @@
 class InheritedFeatureContext extends Behat\MinkExtension\Context\MinkContext
 {
     /**
-     * @Then /^I wait for the suggestion box to appear$/
+     * @Then /^I wait for the dialog box to appear$/
      */
-    public function iWaitForTheSuggestionBoxToAppear()
+    public function iWaitForTheDialogBoxToAppear()
     {
-        $this->getSession()->wait(2000);
+        $this->getSession()->wait(2000, "jQuery('#user-login-dialog').children().length > 0");
     }
 }
