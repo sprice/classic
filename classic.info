@@ -24,6 +24,9 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
 
+dependencies[] = dialog
+dependencies[] = dialog_user
+
 ; Information added by drupal.org packaging script on 2012-10-17
 version = "7.16"
 project = "drupal"
