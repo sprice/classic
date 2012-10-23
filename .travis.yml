@@ -45,5 +45,6 @@ script:
   - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
   - java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
 
-  - cd classic/tests/behat
+  - ls
+  - cd drupal/profiles/classic/tests/behat
   - ./bin/behat
