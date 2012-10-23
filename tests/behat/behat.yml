@@ -3,7 +3,7 @@ default:
     class:  'InheritedFeatureContext'
   extensions:
     Behat\MinkExtension\Extension:
-      base_url:  'http://localhost/'
+      base_url:  'http://127.0.0.1'
       selenium2: ~
       default_session: selenium2
       javascript_session: selenium2
