@@ -41,8 +41,6 @@ script:
   - sudo drush runserver --server=builtin 80 &
   - sleep 3 # give xvfb some time to rebuild
 
-  - curl http://127.0.0.1
-
   - cd ../
   - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
   - java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
