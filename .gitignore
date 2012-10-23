@@ -1,0 +1,4 @@
+tests/behat/composer.phar
+tests/behat/composer.lock
+tests/behat/vendor
+tests/behat/bin

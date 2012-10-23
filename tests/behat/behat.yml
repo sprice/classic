@@ -1,0 +1,10 @@
+default:
+  context:
+    class:  'InheritedFeatureContext'
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url:  http://bing.com
+      zombie: ~
+      selenium2: ~
+      default_session: selenium2
+      javascript_session: selenium2
