@@ -10,12 +10,12 @@ mysql:
 
 before_script:
   # Create MySQL Database
-  #- mysql -e 'create database drupal;'
+  - mysql -e 'create database drupal;'
 
   # Install Drush
-  #- pear channel-discover pear.drush.org
-  #- pear install drush/drush-5.4.0
-  #- phpenv rehash
+  - pear channel-discover pear.drush.org
+  - pear install drush/drush-5.4.0
+  - phpenv rehash
 
   # Run composer
   - cd ./tests/behat
@@ -23,22 +23,22 @@ before_script:
   - cd ../../
 
   # Install Classic Profile
-  #- cd ..
-  #- mkdir profiles
-  #- mv classic profiles/
-  #- mkdir drupal
-  #- mv profiles drupal/
-  #- cd drupal
-  #- drush make --prepare-install profiles/classic/build-classic.make --yes
-  #- sudo chmod -R 777 sites/all/modules
-  #- drush si classic --sites-subdir=default --db-url=mysql://root:@127.0.0.1/drupal --account-name=admin --account-pass=classic --site-mail=admin@example.com --site-name="Drupal Classic Profile" --yes
-  #- drush cc all --yes
+  - cd ..
+  - mkdir profiles
+  - mv classic profiles/
+  - mkdir drupal
+  - mv profiles drupal/
+  - cd drupal
+  - drush make --prepare-install profiles/classic/build-classic.make --yes
+  - sudo chmod -R 777 sites/all/modules
+  - drush si classic --sites-subdir=default --db-url=mysql://root:@127.0.0.1/drupal --account-name=admin --account-pass=classic --site-mail=admin@example.com --site-name="Drupal Classic Profile" --yes
+  - drush cc all --yes
 
 script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - sleep 3 # give xvfb some time to start
-  #- drush runserver --server=builtin 8080 &
+  - drush runserver --server=builtin 8080 &
   - sleep 3 # give xvfb some time to rebuild
 
   - cd ../
