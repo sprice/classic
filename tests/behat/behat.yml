@@ -1,11 +1,20 @@
 default:
+  paths:
+    features: 'features'
+    bootstrap: 'features/bootstrap'
   context:
-    class:  'InheritedFeatureContext'
+    parameters:
+      default_browser: 'goutte'
+    class: 'FeatureContext'
   extensions:
     Behat\MinkExtension\Extension:
       base_url:  'http://127.0.0.1'
       #base_url:  'http://behat.local'
       selenium2: ~
       goutte: ~
-      default_session: goutte
-      javascript_session: selenium2
+      default_session: 'goutte'
+      javascript_session: 'selenium2'
+    Drupal\DrupalExtension\Extension:
+      blackbox: ~
+      drush:
+        alias: classic.local

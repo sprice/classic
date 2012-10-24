@@ -7,12 +7,11 @@ Feature: Homepage
     Given I am on "/"
     Then I should see "Drupal Classic Profile"
 
+  @api
   Scenario: Logging into the site
-    Given I am on "/"
-    When I fill in "edit-name" with "admin"
-    And I fill in "edit-pass" with "classic"
-    And I press "Log in"
-    Then I should see "Add new content"
+    Given I am logged in as a user with the "authenticated user" role
+    And I am on "/"
+    Then I should not see "User login"
 
   @javascript
   Scenario: View an ajax dialog
