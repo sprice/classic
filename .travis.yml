@@ -23,7 +23,7 @@ before_script:
   - cd ../../
 
   # Install Classic Profile
-  - cd ..
+  - cd ../
   - mkdir profiles
   - mv classic profiles/
   - mkdir drupal
@@ -33,6 +33,7 @@ before_script:
   - sudo chmod -R 777 sites/all/modules
   - drush si classic --sites-subdir=default --db-url=mysql://root:@127.0.0.1/drupal --account-name=admin --account-pass=classic --site-mail=admin@example.com --site-name="Drupal Classic Profile" --yes
   - drush cc all --yes
+  - cd ../
 
   # Create drush alias
   - mkdir .drush
@@ -45,7 +46,6 @@ script:
   - sudo drush runserver --server=builtin 80 &
   - sleep 3 # give xvfb some time to rebuild
 
-  - cd ../
   - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
   - java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
   - sleep 5
