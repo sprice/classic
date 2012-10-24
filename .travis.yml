@@ -36,11 +36,7 @@ before_script:
   - cd ../
 
   # Create drush alias
-  - cd
-  - ls
-  - mkdir .drush
-  - cp drupal/profiles/classic/classic.aliases.drushrc.php .drush/
-  - drush @classic.local st
+  - cp drupal/profiles/classic/classic.aliases.drushrc.php ~/.drush/
 
 script:
   - export DISPLAY=:99.0
