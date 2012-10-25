@@ -2,5 +2,4 @@ tests/behat/composer.phar
 tests/behat/composer.lock
 tests/behat/vendor
 tests/behat/bin
-tests/behat/behat.local.yml
 modules/contrib
