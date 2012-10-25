@@ -1,10 +1,4 @@
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "http://github.com/sprice/drupal-extension"
-        }
-    ],
     "require": {
         "behat/behat": "*",
         "behat/mink": "1.4.0",
