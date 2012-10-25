@@ -49,4 +49,5 @@ script:
   - java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
   - sleep 5
   - cd drupal/profiles/classic/tests/behat
+  - touch behat.local.yml
   - ./bin/behat
