@@ -9,7 +9,6 @@ default:
   extensions:
     Behat\MinkExtension\Extension:
       base_url:  'http://127.0.0.1'
-      #base_url:  'http://behat.local'
       selenium2: ~
       goutte: ~
       default_session: 'goutte'
@@ -18,3 +17,5 @@ default:
       blackbox: ~
       drush:
         alias: classic.local
+imports:
+  - behat.local.yml
