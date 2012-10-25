@@ -1,7 +1,7 @@
 Feature: Homepage
   In order to know the website is running
   As a website user
-  I need to be able to view the site title
+  I need to be able to view the site title and login
 
   Scenario: Viewing the site title
     Given I am on "/"
@@ -11,11 +11,4 @@ Feature: Homepage
   Scenario: Logging into the site
     Given I am logged in as a user with the "authenticated user" role
     And I am on "/"
-    Then I should not see "User login"
-
-  @javascript
-  Scenario: View an ajax dialog
-    Given I am on "/dialog/example"
-    When I follow "User login"
-    And I wait for the dialog box to appear
-    Then I should see "Enter your Drupal Classic Profile username."
+    Then I should see "Log out"
