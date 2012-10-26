@@ -31,6 +31,8 @@ Set `base_url` to your local host
     cd /profiles/classic/tests/behat
     ./bin/behat
 
+Create `behat.local.yml` from the example file and set your drush alias for the site.
+
 ## Files of note
 
 * [travis.yml](https://github.com/sprice/classic/blob/master/.travis.yml)
