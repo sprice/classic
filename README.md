@@ -7,15 +7,10 @@ A copy of the Drupal 7 Standard profile, with Behat/Mink testing using Travis CI
 ## Installation
 
     # Create Drupal codebase
-    git clone https://github.com/sprice/classic.git
-    mkdir profiles
-    mv classic profiles/
-    mkdir public_html
-    mv profiles public_html/
-    cd public_html
-    drush make --prepare-install profiles/classic/build-classic.make --yes
+    drush make https://raw.github.com/sprice/classic/master/build-classic.make public_html
 
     # Install Drupal
+    cd public_html
     drush si classic --sites-subdir=default --db-url=mysql://USERNAME:PASSWORD@localhost/DB_NAME --account-name=admin --account-pass=classic --site-mail=admin@example.com --site-name="Drupal Classic Profile" --yes
 
     # Install testing tools
