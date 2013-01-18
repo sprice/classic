@@ -8,7 +8,8 @@ mysql:
   username: root
   encoding: utf8
 
-before_script:
+install:
+
   # Create MySQL Database
   - mysql -e 'create database drupal;'
 
@@ -21,6 +22,8 @@ before_script:
   - cd ./tests/behat
   - composer install
   - cd ../../
+
+before_script:
 
   # Install Classic Profile
   - cd ../
@@ -35,16 +38,19 @@ before_script:
   - drush cc all --yes
   - cd ../
 
-script:
+  # Setup display for selenium
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - sleep 3 # give xvfb some time to start
-  - sudo drush @classic.local runserver --server=builtin 80 &
-  - sleep 3 # give xvfb some time to rebuild
+  - sleep 3
+  - drush runserver --root=$PWD/drupal --server=builtin 80 &
+  - sleep 3
 
   - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
   - java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
   - sleep 5
+
+script:
   - cd drupal/profiles/classic/tests/behat
+  # behat.yml includes behat.local.yml so it must exist
   - touch behat.local.yml
   - ./bin/behat
