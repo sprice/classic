@@ -16,6 +16,6 @@ default:
     Drupal\DrupalExtension\Extension:
       blackbox: ~
       drush:
-        alias: classic.local
+        alias: self
 imports:
   - behat.local.yml

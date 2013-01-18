@@ -35,9 +35,6 @@ before_script:
   - drush cc all --yes
   - cd ../
 
-  # Create drush alias
-  - cp drupal/profiles/classic/tests/behat/classic.aliases.drushrc.php ~/.drush/
-
 script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start

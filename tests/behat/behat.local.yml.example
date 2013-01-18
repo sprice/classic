@@ -2,6 +2,3 @@ default:
   extensions:
     Behat\MinkExtension\Extension:
       base_url:  BASE_URL
-    Drupal\DrupalExtension\Extension:
-      drush:
-        alias: DRUSH_ALIAS
