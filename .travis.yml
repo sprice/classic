@@ -42,7 +42,7 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - sleep 3
-  - drush --root=$PWD/drupal runserver :8080 &
+  - sudo drush --root=$PWD/drupal runserver --server=builtin 80 &
   - sleep 3
 
   - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
