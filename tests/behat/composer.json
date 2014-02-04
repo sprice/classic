@@ -1,7 +1,7 @@
 {
     "require": {
         "behat/behat": "*",
-        "behat/mink": "1.4.0",
+        "behat/mink": "*",
         "behat/mink-goutte-driver": "*",
         "behat/mink-selenium2-driver": "*",
         "drupal/drupal-extension": "*",
@@ -11,7 +11,7 @@
         "symfony/validator": "*",
         "behat/mink-extension": "*",
         "symfony/http-kernel": "*",
-        "fabpot/goutte": "dev-master#5f7fd00"
+        "fabpot/goutte": "*"
     },
     "minimum-stability": "dev",
     "config": {
